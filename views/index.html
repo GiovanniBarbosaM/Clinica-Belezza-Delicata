@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/css/style.css">
     <title>Clínica de Emagrecimento</title>
 </head>
+
 <body>
     <header>
         <h1>Clínica de Emagrecimento</h1>
         <nav>
-            <a href="index.html">Início</a>
-            <a href="register.html">Cadastrar Paciente</a>
-            <a href="schedule.html">Agendar Consulta</a>
-            <a href="contact.html">Contato</a>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="register.html">Cadastrar Paciente</a></li>
+                <li><a href="schedule.html">Agendar Consulta</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -33,21 +37,21 @@
         <!-- Seção de Cadastro de Pacientes -->
         <section id="cadastro-paciente">
             <h2>Cadastro de Pacientes</h2>
-            <form id="form-cadastro">
+            <form id="form-cadastro" aria-labelledby="cadastro-paciente">
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" required>
+                <input type="text" id="nome" name="nome" required>
 
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" required>
+                <input type="email" id="email" name="email" required>
 
                 <label for="telefone">Telefone:</label>
-                <input type="text" id="telefone" required>
+                <input type="text" id="telefone" name="telefone" required>
 
                 <label for="data_nascimento">Data de Nascimento:</label>
-                <input type="date" id="data_nascimento" required>
+                <input type="date" id="data_nascimento" name="data_nascimento" required>
 
                 <label for="historico">Histórico:</label>
-                <input type="text" id="historico" required>
+                <input type="text" id="historico" name="historico" required>
 
                 <button type="submit">Cadastrar</button>
             </form>
@@ -57,12 +61,12 @@
         <!-- Seção de Agendamento de Consultas -->
         <section id="agendamento-consulta">
             <h2>Agendamento de Consultas</h2>
-            <form id="agendamento-form">
+            <form id="agendamento-form" aria-labelledby="agendamento-consulta">
                 <label for="paciente_id">ID do Paciente:</label>
-                <input type="number" id="paciente_id" required>
+                <input type="number" id="paciente_id" name="paciente_id" required>
 
                 <label for="profissional">Profissional:</label>
-                <select id="profissional" required>
+                <select id="profissional" name="profissional" required>
                     <option value="" disabled selected>Selecione um profissional</option>
                     <option value="1">Nutricionista</option>
                     <option value="2">Psicólogo</option>
@@ -73,10 +77,10 @@
                 </select>
 
                 <label for="data_hora">Data e Hora:</label>
-                <input type="datetime-local" id="data_hora" required>
+                <input type="datetime-local" id="data_hora" name="data_hora" required>
 
                 <label for="observacoes">Observações:</label>
-                <textarea id="observacoes" placeholder="Observações (opcional)"></textarea>
+                <textarea id="observacoes" name="observacoes" placeholder="Observações (opcional)"></textarea>
 
                 <button type="submit">Agendar Consulta</button>
             </form>
@@ -93,7 +97,7 @@
         <section id="contatos">
             <h2>Contatos da Clínica</h2>
             <ul>
-                <li>Email: contato@clinica.com.br</li>
+                <li>Email: <a href="mailto:contato@clinica.com.br">contato@clinica.com.br</a></li>
                 <li>WhatsApp: <a href="https://wa.me/5511999999999">+55 11 99999-9999</a></li>
                 <li>Instagram: <a href="https://instagram.com/clinica">Instagram</a></li>
                 <li>Facebook: <a href="https://facebook.com/clinica">Facebook</a></li>
@@ -104,15 +108,15 @@
         <!-- Seção de Envio de Mensagens -->
         <section id="mensagens">
             <h2>Envie sua Mensagem</h2>
-            <form id="mensagem-form">
+            <form id="mensagem-form" aria-labelledby="mensagens">
                 <label for="nomeMensagem">Seu Nome:</label>
-                <input type="text" id="nomeMensagem" required>
+                <input type="text" id="nomeMensagem" name="nomeMensagem" required>
 
                 <label for="emailMensagem">Seu Email:</label>
-                <input type="email" id="emailMensagem" required>
+                <input type="email" id="emailMensagem" name="emailMensagem" required>
 
                 <label for="mensagem">Sua Mensagem:</label>
-                <textarea id="mensagem" required></textarea>
+                <textarea id="mensagem" name="mensagem" required></textarea>
 
                 <button type="submit">Enviar Mensagem</button>
             </form>
@@ -126,4 +130,5 @@
 
     <script src="/public/js/script.js"></script>
 </body>
+
 </html>
