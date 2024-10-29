@@ -1,0 +1,297 @@
+/* public/css/style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Mantém um fundo neutro */
+}
+
+header {
+    background: #ffcccb; /* Rosa claro */
+    color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #ff6f61; /* Rosa avermelhado */
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #32cd32; /* Verde */
+}
+
+main {
+    padding: 20px;
+    background: #ffffff; /* Fundo branco para contraste */
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background: #32cd32; /* Verde */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #28a745; /* Tom mais escuro de verde */
+}
+
+#response-message {
+    margin-top: 20px;
+    color: green;
+}
+/* Definindo um estilo base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilizando formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="datetime-local"],
+button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botões */
+button {
+    background-color: #ff6f61; /* Rosa avermelhado */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4b4b; /* Tom mais escuro de rosa avermelhado */
+}
+
+/* Estilizando listas */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estilizando a responsividade */
+@media (max-width: 600px) {
+    main {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f3f9;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #ffb3d9, #a5e4d7); /* Rosa claro e verde */
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #ff6f61; /* Rosa avermelhado */
+    margin-bottom: 15px;
+}
+
+main {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff6f61; /* Rosa avermelhado */
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    background-color: #ff6f61; /* Rosa avermelhado */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4c3b; /* Rosa mais escuro */
+}
+
+#response-message, #agendamento-response {
+    margin-top: 20px;
+    color: #ff6f61; /* Rosa avermelhado */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    header {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+
+    main {
+        padding: 15px;
+    }
+}
+/* Estilos para o dropdown */
+select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #ff6f61; /* Rosa avermelhado */
+    outline: none;
+}
+
+/* Estilo para formulários */
+form {
+    display: flex;
+    flex-direction: column;
+}
+/* Estilos para a seção de contatos */
+#contatos {
+    background-color: #f9f9f9; /* Cor de fundo leve */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+#contatos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contatos li {
+    margin: 10px 0;
+}
+
+/* Estilos para o formulário de mensagens */
+#mensagens {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#mensagem-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#mensagem-form input, #mensagem-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#mensagem-form button {
+    background-color: #ff6f61; /* Rosa avermelhado */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#mensagem-form button:hover {
+    background-color: #ff4c3b; /* Tom mais escuro ao passar o mouse */
+}

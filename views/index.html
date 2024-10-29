@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Clínica de Emagrecimento</title>
+</head>
+<body>
+    <header>
+        <h1>Clínica de Emagrecimento</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="register.html">Cadastrar Paciente</a>
+            <a href="schedule.html">Agendar Consulta</a>
+            <a href="contact.html">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção de Introdução -->
+        <section id="introducao">
+            <h2>Bem-vindo à Clínica de Emagrecimento</h2>
+            <p>Aqui você encontra profissionais para ajudá-lo em sua jornada de emagrecimento.</p>
+        </section>
+
+        <!-- Seção "Sobre" -->
+        <section id="sobre">
+            <h2>O que fazemos?</h2>
+            <p>Nosso objetivo é ajudar você a alcançar suas metas de emagrecimento com um acompanhamento profissional.</p>
+        </section>
+
+        <!-- Seção de Cadastro de Pacientes -->
+        <section id="cadastro-paciente">
+            <h2>Cadastro de Pacientes</h2>
+            <form id="form-cadastro">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" required>
+
+                <label for="data_nascimento">Data de Nascimento:</label>
+                <input type="date" id="data_nascimento" required>
+
+                <label for="historico">Histórico:</label>
+                <input type="text" id="historico" required>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+            <div id="response-message"></div>
+        </section>
+
+        <!-- Seção de Agendamento de Consultas -->
+        <section id="agendamento-consulta">
+            <h2>Agendamento de Consultas</h2>
+            <form id="agendamento-form">
+                <label for="paciente_id">ID do Paciente:</label>
+                <input type="number" id="paciente_id" required>
+
+                <label for="profissional">Profissional:</label>
+                <select id="profissional" required>
+                    <option value="" disabled selected>Selecione um profissional</option>
+                    <option value="1">Nutricionista</option>
+                    <option value="2">Psicólogo</option>
+                    <option value="3">Endocrinologista</option>
+                    <option value="4">Fisioterapeuta</option>
+                    <option value="5">Massoterapeuta</option>
+                    <option value="6">Dentista</option>
+                </select>
+
+                <label for="data_hora">Data e Hora:</label>
+                <input type="datetime-local" id="data_hora" required>
+
+                <label for="observacoes">Observações:</label>
+                <textarea id="observacoes" placeholder="Observações (opcional)"></textarea>
+
+                <button type="submit">Agendar Consulta</button>
+            </form>
+            <div id="agendamento-message"></div>
+        </section>
+
+        <!-- Seção de Consultas Agendadas -->
+        <section id="consultas-agendadas">
+            <h2>Consultas Agendadas</h2>
+            <div id="consultas-agendadas"></div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contatos">
+            <h2>Contatos da Clínica</h2>
+            <ul>
+                <li>Email: contato@clinica.com.br</li>
+                <li>WhatsApp: <a href="https://wa.me/5511999999999">+55 11 99999-9999</a></li>
+                <li>Instagram: <a href="https://instagram.com/clinica">Instagram</a></li>
+                <li>Facebook: <a href="https://facebook.com/clinica">Facebook</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/company/clinica">LinkedIn</a></li>
+            </ul>
+        </section>
+
+        <!-- Seção de Envio de Mensagens -->
+        <section id="mensagens">
+            <h2>Envie sua Mensagem</h2>
+            <form id="mensagem-form">
+                <label for="nomeMensagem">Seu Nome:</label>
+                <input type="text" id="nomeMensagem" required>
+
+                <label for="emailMensagem">Seu Email:</label>
+                <input type="email" id="emailMensagem" required>
+
+                <label for="mensagem">Sua Mensagem:</label>
+                <textarea id="mensagem" required></textarea>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+            <div id="mensagem-response"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Clínica de Emagrecimento</p>
+    </footer>
+
+    <script src="/public/js/script.js"></script>
+</body>
+</html>

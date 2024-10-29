@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Consulta</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Agendar Consulta</h1>
+    </header>
+    <main>
+        <form id="schedule-form">
+            <label for="paciente_id">ID do Paciente:</label>
+            <input type="number" id="paciente_id" name="paciente_id" required>
+            
+            <label for="profissional_id">ID do Profissional:</label>
+            <input type="number" id="profissional_id" name="profissional_id" required>
+
+            <label for="data_horario">Data e Hora:</label>
+            <input type="datetime-local" id="data_horario" name="data_horario" required>
+
+            <button type="submit">Agendar</button>
+        </form>
+        <div id="response-message"></div>
+    </main>
+    <script src="/js/script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/public/css/style.css">
+        <title>Agendar Consulta</title>
+    </head>
+    <body>
+        <header>
+            <h1>Clínica de Emagrecimento</h1>
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="register.html">Cadastrar Paciente</a>
+            </nav>
+        </header>
+        <main>
+            <h2>Agendar Consulta</h2>
+            <form id="agendamento-form">
+                <input type="number" id="pacienteId" placeholder="ID do Paciente" required>
+                <input type="number" id="profissionalId" placeholder="ID do Profissional" required>
+                <input type="datetime-local" id="dataHora" required>
+                <textarea id="observacoes" placeholder="Observações (opcional)"></textarea>
+                <button type="submit">Agendar</button>
+            </form>
+            <div id="agendamento-response"></div>
+        </main>
+        <script src="/public/js/script.js"></script>
+    </body>
+    </html>
+    
