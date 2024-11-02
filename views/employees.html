@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css">
+    <title>Funcionários - Clínica de Emagrecimento</title>
+</head>
+<body>
+    <!-- Cabeçalho com navegação -->
+    <header>
+        <div class="header-content">
+            <img src="admi" alt="Imagem Esquerda" class="header-image left">
+            <h1>Belezza Delicata</h1>
+            <img src="caminho/para/imagem-direita.png" alt="Imagem Direita" class="header-image right">
+        </div>
+        <nav class="navbar">
+            <h2>Sua Clínica de Emagrecimento</h2>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="register.html">Cadastrar Paciente</a></li>
+                <li><a href="schedule.html">Agendar Consulta</a></li>
+                <li><a href="employees.html">Funcionários</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    </header>
+
+    <!-- Seção da área de Funcionários -->
+    <main>
+        <section id="funcionarios">
+            <h2>Área de Funcionários</h2>
+            <p>Bem-vindo à área de funcionários. Aqui você pode gerenciar médicos, pacientes e agendamentos.</p>
+
+            <!-- Menu de Especialidades -->
+            <h3>Especialidades</h3>
+            <nav>
+                <ul id="specialties-menu">
+                    <button data-specialty="Nutricionista">Nutricionista</button>
+                    <button data-specialty="Psicólogo">Psicólogo</button>
+                    <button data-specialty="Endocrinologista">Endocrinologista</button>
+                    <button data-specialty="Fisioterapeuta">Fisioterapeuta</button>
+                    <button data-specialty="Massoterapeuta">Massoterapeuta</button>
+                    <button data-specialty="Dentista">Dentista</button>
+                
+            </nav>
+
+            <!-- Calendário -->
+            <h3>Calendário de Agendamentos</h3>
+            <div id="calendar"></div>
+
+            <!-- Formulário para cadastro de médicos -->
+            <h3>Cadastrar Médico</h3>
+            <form id="doctorForm">
+                <label for="doctorName">Nome do Médico:</label>
+                <input type="text" id="doctorName" name="name" placeholder="Nome do Médico" required>
+                <label for="doctorSpecialty">Especialidade:</label>
+                <input type="text" id="doctorSpecialty" name="specialty" placeholder="Especialidade" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+
+            <div id="doctorsList">
+                <h3>Médicos Cadastrados</h3>
+                <ul id="doctorsUl"></ul>
+            </div>
+
+            <!-- Formulário para agendamentos -->
+            <h3>Agendamentos</h3>
+            <form id="appointmentForm">
+                <label for="patientSelect">Selecione o Paciente:</label>
+                <select name="patient_id" id="patientSelect" required>
+                    <!-- Opções de pacientes serão preenchidas dinamicamente -->
+                </select>
+                <label for="doctorSelect">Selecione o Médico:</label>
+                <select name="doctor_id" id="doctorSelect" required>
+                    <!-- Opções de médicos serão preenchidas dinamicamente -->
+                </select>
+                <label for="appointmentTime">Data e Hora da Consulta:</label>
+                <input type="datetime-local" name="appointment_time" id="appointmentTime" required>
+                <button type="submit">Agendar Consulta</button>
+            </form>
+
+            <div id="appointmentsList">
+                <h3>Agendamentos Realizados</h3>
+                <ul id="appointmentsUl"></ul>
+            </div>
+
+            <!-- Formulário para cadastro de funcionário -->
+            <h3>Cadastrar Funcionário</h3>
+            <form id="newEmployeeForm">
+                <label for="newEmployeeName">Nome do Funcionário:</label>
+                <input type="text" id="newEmployeeName" name="new_employee_name" placeholder="Nome do Funcionário" required>
+                <label for="newEmployeePassword">Senha do Funcionário:</label>
+                <input type="password" id="newEmployeePassword" name="new_employee_password" placeholder="Senha do Funcionário" required>
+                <button type="submit">Cadastrar Funcionário</button>
+            </form>
+
+            <div id="employeeList">
+                <h3>Funcionários Cadastrados</h3>
+                <ul id="employeesUl"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Belezza Delicata</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <script src="/public/js/script.js"></script>
+</body>
+</html>

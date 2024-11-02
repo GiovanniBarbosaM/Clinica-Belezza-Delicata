@@ -1,297 +1,141 @@
-/* public/css/style.css */
-body {
-    font-family: Arial, sans-serif;
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Mantém um fundo neutro */
+    box-sizing: border-box;
 }
 
-header {
-    background: #ffcccb; /* Rosa claro */
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffeef2; /* Rosa claro */
     color: #333;
-    padding: 10px 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o corpo ocupe a altura total da tela */
+}
+
+/* Cabeçalho e Navegação */
+header {
+    background: linear-gradient(to right, #ff6f91, #00ff9f); /* Transição de rosa para verde */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens */
+    justify-content: space-between; /* Espaço entre a imagem e o título */
+    padding: 0 20px; /* Adiciona espaço lateral */
+}
+
+.header-image {
+    width: 50px; /* Largura da imagem */
+    height: auto;
+}
+
+.navbar {
     text-align: center;
 }
 
-nav a {
-    margin: 0 15px;
-    color: #ff6f61; /* Rosa avermelhado */
-    text-decoration: none;
+.navbar h2 {
+    margin: 10px 0; /* Margem superior e inferior */
 }
 
-nav a:hover {
-    color: #32cd32; /* Verde */
-}
-
-main {
-    padding: 20px;
-    background: #ffffff; /* Fundo branco para contraste */
-    margin: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    background: #32cd32; /* Verde */
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-button:hover {
-    background: #28a745; /* Tom mais escuro de verde */
-}
-
-#response-message {
-    margin-top: 20px;
-    color: green;
-}
-/* Definindo um estilo base */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
+.navbar .menu {
+    list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
+.navbar .menu li {
+    margin: 0 15px; /* Espaçamento entre itens do menu */
+}
+
+.navbar .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.navbar .menu a:hover {
+    background-color: #ff3b5f; /* Cor do hover */
+    border-radius: 5px;
+    transform: translateY(-2px);
+}
+
+/* Layout Principal */
 main {
+    flex: 1; /* Faz o main ocupar todo o espaço disponível */
+    padding: 20px;
+    background-color: #e0f7fa; /* Verde claro */
     max-width: 800px;
     margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* Bordas mais suaves */
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1); /* Sombra mais sutil */
+    text-align: center;
 }
 
-/* Estilizando formulários */
+/* Títulos */
+h2, h3 {
+    color: #007f00; /* Verde escuro para títulos */
+    margin-top: 20px;
+    font-weight: bold; /* Negrito */
+}
+
+/* Formulários */
 form {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    align-items: center; /* Alinha os itens do formulário ao centro */
+    margin: 20px 0;
 }
 
-label {
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="number"],
-input[type="datetime-local"],
-button {
+form input,
+form textarea,
+form select {
+    width: 80%; /* Largura dos inputs */
+    margin: 10px 0;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ff6f91; /* Borda rosa */
     border-radius: 5px;
+    transition: border-color 0.3s ease; /* Suavidade na borda */
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #007f00; /* Verde escuro ao focar */
 }
 
 /* Botões */
 button {
-    background-color: #ff6f61; /* Rosa avermelhado */
+    background-color: #ff6f91; /* Rosa */
     color: white;
     border: none;
+    padding: 10px 15px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s; /* Suavidade na transição */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-top: 10px; /* Espaçamento superior no botão */
 }
 
 button:hover {
-    background-color: #ff4b4b; /* Tom mais escuro de rosa avermelhado */
+    background-color: #ff3b5f; /* Cor do hover */
+    transform: translateY(-2px); /* Leve elevação ao passar o mouse */
 }
 
-/* Estilizando listas */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-/* Estilizando a responsividade */
-@media (max-width: 600px) {
-    main {
-        margin: 10px;
-        padding: 10px;
-    }
-
-    button {
-        font-size: 16px;
-    }
-}
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f3f9;
-    color: #333;
-}
-
-header {
-    background: linear-gradient(to right, #ffb3d9, #a5e4d7); /* Rosa claro e verde */
-    padding: 20px;
+/* Rodapé */
+footer {
     text-align: center;
-}
-
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-h2 {
-    color: #ff6f61; /* Rosa avermelhado */
-    margin-bottom: 15px;
-}
-
-main {
-    padding: 20px;
-    max-width: 600px;
-    margin: auto;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-input, textarea {
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-input:focus, textarea:focus {
-    border-color: #ff6f61; /* Rosa avermelhado */
-    outline: none;
-}
-
-button {
-    padding: 10px;
-    background-color: #ff6f61; /* Rosa avermelhado */
+    background-color: #ff6f91; /* Rosa */
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #ff4c3b; /* Rosa mais escuro */
-}
-
-#response-message, #agendamento-response {
-    margin-top: 20px;
-    color: #ff6f61; /* Rosa avermelhado */
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-    header {
-        padding: 15px;
-    }
-    
-    h1 {
-        font-size: 2em;
-    }
-    
-    h2 {
-        font-size: 1.5em;
-    }
-
-    main {
-        padding: 15px;
-    }
-}
-/* Estilos para o dropdown */
-select {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    cursor: pointer;
-}
-
-select:focus {
-    border-color: #ff6f61; /* Rosa avermelhado */
-    outline: none;
-}
-
-/* Estilo para formulários */
-form {
-    display: flex;
-    flex-direction: column;
-}
-/* Estilos para a seção de contatos */
-#contatos {
-    background-color: #f9f9f9; /* Cor de fundo leve */
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-}
-
-#contatos ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#contatos li {
-    margin: 10px 0;
-}
-
-/* Estilos para o formulário de mensagens */
-#mensagens {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-#mensagem-form {
-    display: flex;
-    flex-direction: column;
-}
-
-#mensagem-form input, #mensagem-form textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#mensagem-form button {
-    background-color: #ff6f61; /* Rosa avermelhado */
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#mensagem-form button:hover {
-    background-color: #ff4c3b; /* Tom mais escuro ao passar o mouse */
+    position: relative;
 }

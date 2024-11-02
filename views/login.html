@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Login - Clínica de Emagrecimento</title>
+</head>
+<body>
+   <!-- Cabeçalho com navegação -->
+   <header>
+    <div class="header-content">
+        <img src="admi" alt="Imagem Esquerda" class="header-image left">
+        <h1>Belezza Delicata</h1>
+        <img src="caminho/para/imagem-direita.png" alt="Imagem Direita" class="header-image right">
+    </div>
+    <nav class="navbar">
+        <h2>Sua Clínica de Emagrecimento</h2>
+        <ul class="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="register.html">Cadastrar Paciente</a></li>
+            <li><a href="schedule.html">Agendar Consulta</a></li>
+            <li><a href="employees.html">Funcionários</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="loginSection">
+        <h2>Área de Login</h2>
+        <form id="loginForm" action="/login" method="POST">
+            <input type="text" id="username" name="username" placeholder="Usuário" required>
+            <input type="password" id="password" name="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <div id="loginMessage" style="color: red; display: none;">Usuário ou senha incorretos!</div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Belezza Delicata</p>
+</footer>
+
+<script src="/public/js/script.js"></script>
+</body>
+</html>

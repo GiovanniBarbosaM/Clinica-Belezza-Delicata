@@ -3,65 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendar Consulta</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.2/main.min.css" rel="stylesheet" />
+    <title>Agendar Consulta - Clínica de Emagrecimento</title>
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header>
-        <h1>Agendar Consulta</h1>
+        <div class="header-content">
+            <img src="admi" alt="Imagem Esquerda" class="header-image left">
+            <h1>Belezza Delicata</h1>
+            <img src="caminho/para/imagem-direita.png" alt="Imagem Direita" class="header-image right">
+        </div>
+        <nav class="navbar">
+            <h2>Sua Clínica de Emagrecimento</h2>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="register.html">Cadastrar Paciente</a></li>
+                <li><a href="schedule.html">Agendar Consulta</a></li>
+                <li><a href="employees.html">Funcionários</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <!-- Formulário de Agendamento -->
     <main>
-        <form id="schedule-form">
+        <h2>Agendar Consulta</h2>
+        <form id="appointment-form" action="/agendamentos/novo" method="POST">
             <label for="paciente_id">ID do Paciente:</label>
-            <input type="number" id="paciente_id" name="paciente_id" required>
-            
+            <input type="number" id="paciente_id" name="paciente_id" placeholder="ID do Paciente" required>
+
             <label for="profissional_id">ID do Profissional:</label>
-            <input type="number" id="profissional_id" name="profissional_id" required>
+            <input type="number" id="profissional_id" name="profissional_id" placeholder="ID do Profissional" required>
+
+            <label for="especialidade">Escolha a Especialidade:</label>
+            <select id="especialidade" name="especialidade" required>
+                <option value="">Selecione uma especialidade</option>
+                <option value="nutricao">Nutrição</option>
+                <option value="psicologia">Psicologia</option>
+                <option value="fisioterapia">Fisioterapia</option>
+                <option value="personal_trainer">Personal Trainer</option>
+                <option value="dietetica">Dietética</option>
+            </select>
 
             <label for="data_horario">Data e Hora:</label>
             <input type="datetime-local" id="data_horario" name="data_horario" required>
 
-            <button type="submit">Agendar</button>
+            <button type="submit">Agendar Consulta</button>
         </form>
-        <div id="response-message"></div>
+        <div id="agendamento-response" class="response-message" style="display:none; margin-top:20px;">
+            <h3>Consulta agendada com sucesso!</h3>
+        </div>
     </main>
-    <script src="/js/script.js"></script>
+
+    <footer>
+        <p>&copy;2024 Belezza Delicata</p>
+    </footer>
+
+    <script src="/public/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.2/main.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const calendarEl = document.getElementById('calendar');
+
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            dateClick: function(info) {
+                alert('Data clicada: ' + info.dateStr);
+                // Aqui você pode implementar a lógica para exibir horários disponíveis
+            },
+            events: [
+                {
+                    title: 'Consulta Agendada',
+                    start: '2024-11-15T10:00:00',
+                    end: '2024-11-15T11:00:00',
+                    color: 'red' // Horário agendado
+                },
+                {
+                    title: 'Horário Disponível',
+                    start: '2024-11-16T10:00:00',
+                    end: '2024-11-16T11:00:00',
+                    color: 'green' // Horário disponível
+                }
+            ]
+        });
+
+        calendar.render();
+    });
+    </script>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/
-    <!DOCTYPE html>
-    <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/public/css/style.css">
-        <title>Agendar Consulta</title>
-    </head>
-    <body>
-        <header>
-            <h1>Clínica de Emagrecimento</h1>
-            <nav>
-                <a href="index.html">Início</a>
-                <a href="register.html">Cadastrar Paciente</a>
-            </nav>
-        </header>
-        <main>
-            <h2>Agendar Consulta</h2>
-            <form id="agendamento-form">
-                <input type="number" id="pacienteId" placeholder="ID do Paciente" required>
-                <input type="number" id="profissionalId" placeholder="ID do Profissional" required>
-                <input type="datetime-local" id="dataHora" required>
-                <textarea id="observacoes" placeholder="Observações (opcional)"></textarea>
-                <button type="submit">Agendar</button>
-            </form>
-            <div id="agendamento-response"></div>
-        </main>
-        <script src="/public/js/script.js"></script>
-    </body>
-    </html>
-    

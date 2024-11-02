@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Agendar Consulta - Clínica de Emagrecimento</title>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header id="header-container"></header>
+
+    <script>
+        // Carregando o cabeçalho
+        fetch('/public/html/header.html') // Verifique se o caminho está correto
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            })
+            .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
+    </script>
+
+    <!-- Formulário de Agendamento -->
+    <main class="container">
+        <h2>Agendar Consulta</h2>
+        <form id="appointment-form" action="/agendamentos/novo" method="POST">
+            <div class="form-group">
+                <label for="paciente_id">ID do Paciente:</label>
+                <input type="number" id="paciente_id" name="paciente_id" placeholder="ID do Paciente" required>
+            </div>
+
+            <div class="form-group">
+                <label for="profissional_id">ID do Profissional:</label>
+                <input type="number" id="profissional_id" name="profissional_id" placeholder="ID do Profissional" required>
+            </div>
+
+            <div class="form-group">
+                <label for="data_horario">Data e Hora:</label>
+                <input type="datetime-local" id="data_horario" name="data_horario" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Agendar Consulta</button>
+        </form>
+
+        <div id="agendamento-response" class="response-message" style="display:none; margin-top:20px;">
+            <h3>Consulta agendada com sucesso!</h3>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Belezza Delicata</p>
+    </footer>
+
+    <script src="/public/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Relatórios - Clínica de Emagrecimento</title>
+</head>
+<body>
+    <header class="navbar">
+        <h1>Clínica de Emagrecimento</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="register.html">Cadastrar Paciente</a></li>
+                <li><a href="schedule.html">Agendar Consulta</a></li>
+                <li><a href="admin.html">Área do Funcionário</a></li>
+                <li><a href="reports.html">Relatórios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Relatório de Agendamentos</h2>
+            <button id="load-appointments-report">Carregar Relatório de Agendamentos</button>
+            <table id="appointments-report-table" class="report-table" style="display:none;">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Paciente</th>
+                        <th>Médico</th>
+                        <th>Data/Hora</th>
+                    </tr>
+                </thead>
+                <tbody id="appointments-report-body"></tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Relatório de Pacientes</h2>
+            <button id="load-patients-report">Carregar Relatório de Pacientes</button>
+            <table id="patients-report-table" class="report-table" style="display:none;">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                    </tr>
+                </thead>
+                <tbody id="patients-report-body"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Belezza Delicata</p>
+    </footer>
+
+    <script src="/public/js/report.js"></script>
+</body>
+</html>
